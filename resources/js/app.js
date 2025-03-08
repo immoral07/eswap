@@ -1,14 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     let translations = {
-        "Women": "Mujeres",
-        "Men": "Hombres",
-        "Clothing": "Ropa",
-        "Shoes": "Zapatos",
-        "Accessories": "Accesorios",
-        "Bags": "Bolsos",
-        "Jewelry": "Joyas",
-        "Watches": "Relojes",
+        "Women": {
+            "es": "Mujeres",
+            "fr": "Femmes",
+            "de": "Frauen",
+            "en": "Women",
+        },
+        "Men": {
+            "es": "Hombres",
+            "fr": "Hommes",
+            "de": "Männer",
+            "en": "Men",
+        },
+        "Clothing": {
+            "es": "Ropa",
+            "fr": "Vêtements",
+            "de": "Kleidung",
+            "en": "Clothing",
+        },
+        "Shoes": {
+            "es": "Zapatos",
+            "fr": "Chaussures",
+            "de": "Schuhe",
+            "en": "Shoes",
+        },
+        "Accessories": {
+            "es": "Accesorios",
+            "fr": "Accessoires",
+            "de": "Zubehör",
+            "en": "Accessories",
+        },
+        "Bags": {
+            "es": "Bolsos",
+            "fr": "Sacs",
+            "de": "Taschen",
+            "en": "Bags",
+        },
+        "Jewelry": {
+            "es": "Joyas",
+            "fr": "Bijoux",
+            "de": "Schmuck",
+            "en": "Jewelry",
+        },
+        "Watches": {
+            "es": "Relojes",
+            "fr": "Montres",
+            "de": "Uhren",
+            "en": "Watches",
+        },
+        "Home": {
+            "es": "Inicio",
+            "fr": "Accueil",
+            "de": "Startseite",
+            "en": "Home",
+        },
+        "Contact": {
+            "es": "Contacto",
+            "fr": "Contact",
+            "de": "Kontakt",
+            "en": "Contact",
+        },
+        "About": {
+            "es": "Acerca de",
+            "fr": "À propos de",
+            "de": "Über",
+            "en": "About",
+        },
     };
 
     function __(text) {
@@ -175,19 +233,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 <ul class="menu__list">
                     <li class="menu__item
                         ${window.location.pathname === '/' ? 'active' : ''}">
-                        <a href="/" class="menu__link">Home</a>
+                        <a href="/" class="menu__link">${__("Home")}</a>
                     </li>
                     <li class="menu__item
-                        ${window.location.pathname === '/shop' ? 'active' : ''}">
-                        <a href="/shop" class="menu__link">Shop</a>
+                        ${window.location.pathname === '/women' ? 'active' : ''}">
+                        <a href="#" class="menu__link">${__("Women")}</a>
+                    </li>
+                    <li class="menu__item
+                        ${window.location.pathname === '/men' ? 'active' : ''}">
+                        <a href="#" class="menu__link">${__("Men")}</a>
+                    </li>
+                    <li class="menu__item
+                        ${window.location.pathname === '/categories' ? 'active' : ''}">
+                        <a href="#" class="menu__link">${__("Categories")}</a>
                     </li>
                     <li class="menu__item
                         ${window.location.pathname === '/contact' ? 'active' : ''}">
-                        <a href="/contact" class="menu__link">Contact</a>
+                        <a href="#" class="menu__link">${__("Contact")}</a>
                     </li>
                     <li class="menu__item
                         ${window.location.pathname === '/about' ? 'active' : ''}">
-                        <a href="/about" class="menu__link">About</a>
+                        <a href="#" class="menu__link">${__("About")}</a>
                     </li>
                 </ul>
             </div>
