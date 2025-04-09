@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function __(text) {
-        return translations[text] || text;
+        return translations[text] ? translations[text]["en"] : text;
     }
 
     const searchForm = document.querySelector(".search-form");
